@@ -1,9 +1,0 @@
-
-foo: bar
----
-spring:
-  profiles: default
-eureka:
-  instance:
-    hostname: areion-eureka-1
-    nonSecurePort: 80
