@@ -1,14 +1,12 @@
 spring:
   application.name: eureka-server
 security.basic.enabled: false
-server.port: 8761
+netflix:
+  appinfo.name: ${spring.application.name}
+server.port: 9000
 eureka:
-  instance:
-    hostname: localhost
   client:
     registerWithEureka: false
     fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-   server:
-     waitTimeInMsWhenSyncEmpty: 0
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
